@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', 'sans-serif';
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.todoapp {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todoapp h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todoapp h2 img {
+    width: 50px;
+}
+
+
+
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #cfd1d5;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 10px;
+   
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 45px;
+}
+button:hover{
+    background: #ee210a;
+}
+ul li{
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size:17px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: " ";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(./uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px; 
+}
+ul li.checked{
+    color: #c2baba;
+    text-decoration: line-through;
+}
+.checked::before{
+    background-image: url(./checked.png);
+}
+
+ul li span{
+position: absolute;
+right: 0;
+top: 5px;
+width: 40px;
+height: 40px;
+color: rgb(2, 2, 2);
+font-size: 25px;
+line-height: 40px;
+text-align: center;
+}
+ul li span:hover{
+    background: #d5d8dd;
+    border-radius: 40px;
+}
+
+/* Responsive CSS for phones */
+@media only screen and (max-width: 480px) {
+    .todoapp {
+        width: 90%;
+        padding: 20px 15px;
+        margin: 50px auto;
+        border-radius: 8px;
+    }
+
+   
+
+    .box {
+        flex-direction: column; 
+        align-items: center;    
+        justify-content: center; 
+    }
+
+    .box input {
+        width: 100%;           
+        padding: 12px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        border-radius: 10px; 
+         
+    }
+
+
+   .box button {
+        width: 100%;   
+        border-radius: none;          
+         padding: 12px;
+        font-size: 16px;
+          
+    } 
+
+    ul li {
+        font-size: 14px;
+        padding: 10px 8px 10px 40px;
+    }
+
+    ul li::before {
+        height: 20px;
+        width: 20px;
+        top: 10px;
+        left: 10px;
+    }
+
+    ul li span {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        line-height: 30px;
+        right: 10px; 
+    }
+}
